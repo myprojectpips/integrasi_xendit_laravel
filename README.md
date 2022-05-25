@@ -18,3 +18,7 @@
         > php artisan serve
     6. Tinggal digunakan
 </pre>
+
+<p>
+    <strong>NOTE : </strong> Disini saya menyediakan core api dengan EWALLET, Virtual Account, dan QR Code/QRIS. Nanti saya akan menambahkannya lagi.
+</p>
