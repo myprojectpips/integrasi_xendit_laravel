@@ -10,8 +10,16 @@
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <script src="{{ mix('js/app.js') }}"></script>
+
+    <link rel="stylesheet" href="/loading.css">
+    <script src="/jquery.js"></script>
 </head>
 <body class="bg-light">
+    <div id="background-loading">
+        <span class="loading-text">LOADING</span>
+        <div class="loader"></div>
+    </div>
+
     <div class="container">
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark mb-5 mt-5">
             <div class="container-fluid">
@@ -25,11 +33,20 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('index.va') }}">Virtual Account</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('index.qrCode') }}">QR Code</a>
+                </li>
             </ul>
             </div>
         </nav>
 
         @yield('content')
     </div>
+
+    <script>
+        $(window).load(function(){
+            $('#background-loading').fadeOut("slow");
+        });
+    </script>
 </body>
 </html>

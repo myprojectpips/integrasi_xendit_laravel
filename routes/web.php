@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\ewalletController;
 use App\Http\Controllers\vaController;
+use App\Http\Controllers\qrCodeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,4 +42,10 @@ Route::controller(vaController::class)->group(function () {
     Route::post('/va/create-va', 'createVa')->name('va.createVa');
     Route::post('/va/callback', 'vaCallback')->name('va.callback');
     Route::get('/get-va-bank', 'getVA');
+});
+
+Route::controller(qrCodeController::class)->group(function () {
+    Route::get('/qr-code', 'index')->name('index.qrCode');
+    Route::post('/qr-code/create', 'createQR')->name('qrCode.create');
+    Route::post('/qr-code/callback', 'QrCodeCallback')->name('qrCode.callback');
 });

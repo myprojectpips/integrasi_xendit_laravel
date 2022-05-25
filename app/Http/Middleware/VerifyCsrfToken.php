@@ -15,6 +15,6 @@ class VerifyCsrfToken extends Middleware
         'api/*',
         '/ewallet/callback',
         '/va/callback',
-        '/va/callback/update'
+        '/qr-code/callback'
     ];
 }

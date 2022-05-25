@@ -22,6 +22,7 @@
         "sass-loader": "^11.0.1"
     },
     "dependencies": {
+        "html5-qrcode": "^2.2.1",
         "xendit-node": "^1.21.2"
     }
 }
