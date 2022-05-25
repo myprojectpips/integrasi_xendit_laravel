@@ -16,7 +16,7 @@
     5. Buat database bernama "xendit", lalu tulis pada commandline dibawah ini :
         > php artisan migrate
         > php artisan serve
-    6. Tinggal digunakan
+    6. Silahkan Gunakan
 </pre>
 
 <p>
