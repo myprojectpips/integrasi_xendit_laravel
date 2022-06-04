@@ -18,15 +18,15 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('phone');
-            $table->text('id');
-            $table->string('external_id');
-            $table->string('payment_channel');
-            $table->string('nominal');
-            $table->string('status');
-            $table->string('qr_string');
-            $table->string('pay_at');
-            $table->string('receipt_id');
-            $table->string('source');
+            $table->text('id')->nullable();
+            $table->string('external_id')->nullable();
+            $table->string('payment_channel')->nullable();
+            $table->string('nominal')->nullable();
+            $table->string('status')->nullable();
+            $table->string('qr_string')->nullable();
+            $table->string('pay_at')->nullable();
+            $table->string('receipt_id')->nullable();
+            $table->string('source')->nullable();
             $table->timestamps();
         });
     }

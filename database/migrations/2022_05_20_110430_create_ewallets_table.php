@@ -12,17 +12,17 @@ return new class extends Migration {
      */
     public function up() {
         Schema::create('tb_ewallet', function (Blueprint $table) {
-            $table->integer('count');
+            $table->id('count');
             $table->string('name');
             $table->string('email');
             $table->string('phone');
-            $table->string('id');
-            $table->string('reference_id');
-            $table->string('payment_channel');
-            $table->string('channel_code');
-            $table->string('amount');
-            $table->string('status');
-            $table->string('pay_at');
+            $table->string('id')->nullable();
+            $table->string('reference_id')->nullable();
+            $table->string('payment_channel')->nullable();
+            $table->string('channel_code')->nullable();
+            $table->string('amount')->nullable();
+            $table->string('status')->nullable();
+            $table->string('pay_at')->nullable();
             $table->timestamps();
         });
     }

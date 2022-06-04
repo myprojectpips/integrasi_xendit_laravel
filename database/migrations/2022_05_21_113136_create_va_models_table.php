@@ -14,19 +14,19 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tb_va', function (Blueprint $table) {
-            $table->integer('count');
+            $table->id('count');
             $table->string('name');
             $table->string('email');
             $table->string('phone');
-            $table->string('id');
-            $table->string('external_id');
-            $table->string('payment_channel');
-            $table->string('bank');
-            $table->string('account_number');
-            $table->string('amount');
-            $table->string('status');
-            $table->string('expire_at');
-            $table->string('pay_at');
+            $table->string('id')->nullable();
+            $table->string('external_id')->nullable();
+            $table->string('payment_channel')->nullable();
+            $table->string('bank')->nullable();
+            $table->string('account_number')->nullable();
+            $table->string('amount')->nullable();
+            $table->string('status')->nullable();
+            $table->string('expire_at')->nullable();
+            $table->string('pay_at')->nullable();
             $table->timestamps();
         });
     }

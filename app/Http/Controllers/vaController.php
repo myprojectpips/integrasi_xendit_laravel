@@ -58,7 +58,7 @@ class vaController extends Controller {
                 "external_id" => "test-va-".rand(),
                 "bank_code" => $req->payment_method,
                 "name" => $req->nama,
-                "expected_amount" => 1000,
+                "expected_amount" => 10000,
                 "is_single_use" => true,
                 "expiration_date" => Carbon::now()->addDays(1)->toISOString()
             ];
